@@ -1,0 +1,6 @@
+# Routes
+# Map static resources from the /public folder to the /assets URL path
+GET     /                           controllers.HomeController.index
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET /chat/index_socket  controllers.ChatController.index_socket
+GET /chat/ws                    controllers.ChatController.ws
