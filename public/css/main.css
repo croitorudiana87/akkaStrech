@@ -35,8 +35,8 @@
  *    ## home scroll
  *    ## home scroll
  *    ## home animations
- *  # about
- *    ## about process
+ *  # login
+ *    ## login process
  *  # services
  *    ## services list
  *  # works
@@ -2211,10 +2211,10 @@ html.no-csstransitions .home-content__main {
 
 
 /* ===================================================================
- * # about
+ * # login
  *
  * ------------------------------------------------------------------- */
-.s-about {
+.s-login {
   padding-top: 18rem;
   padding-bottom: 18rem;
   background-color: #ffffff;
@@ -2223,7 +2223,7 @@ html.no-csstransitions .home-content__main {
 
 
 /* ------------------------------------------------------------------- 
- * ## about process
+ * ## login process
  * ------------------------------------------------------------------- */
 .process {
   margin-top: 4.2rem;
@@ -2280,10 +2280,10 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * about
+ * login
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
-  .s-about {
+  .s-login {
     padding-top: 15rem;
     padding-bottom: 15rem;
   }
@@ -2310,7 +2310,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 @media only screen and (max-width: 800px) {
-  .s-about {
+  .s-login {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
@@ -2341,7 +2341,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 @media only screen and (max-width: 400px) {
-  .s-about {
+  .s-login {
     padding-top: 9.6rem;
   }
 

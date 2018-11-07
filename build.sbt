@@ -15,6 +15,10 @@ libraryDependencies += ws
 
 libraryDependencies += "org.webjars" % "flot" % "0.8.3"
 libraryDependencies += "org.webjars" % "bootstrap" % "3.3.6"
+libraryDependencies += cache
+libraryDependencies += jdbc
+libraryDependencies += evolutions
+libraryDependencies += "com.typesafe.play" %% "anorm" % "2.4.0"
 
 lazy val akkaVersion = "2.4.18"
 libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test

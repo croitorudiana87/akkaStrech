@@ -14,7 +14,7 @@
 
                 websocket.onmessage = function(evt) {
                     console.log(evt.data)
-                    writeToScreen('<span style="color:blue;">' + evt.data+ '</span>');
+                    writeToScreen('<span style="color:#2d8659;">' + evt.data+ '</span>');
                 };
 
                 websocket.onerror = function(evt) {
@@ -35,20 +35,20 @@
 
             window.addEventListener("load", init, false);
     </script>
+    <section id='login' class="s-home target-section" data-parallax="scroll" data-image-src="@routes.Assets.at("images/hero-bg.jpg")" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+        <div class="log-form">
+            <h2>Messages</h2>
+            <div id="output" style="width: 800px; height: 400px; overflow-y: scroll;" >
+            </div>
+            <form>
+                <input type="text" title="txtMessage" placeholder="Message" id="txtMessage"/>
+                <button type="button" class="btn" onclick="doSend(window.sessionStorage.getItem('user') + ':' + document.getElementById('txtMessage').value );">
+                    Send Message</button>
+                <button type="button" class="btn" onclick="window.location.href='/'; " style="float: right;">
+                    Home</button>
+            </form>
+        </div>
 
-    <h3>Messages</h3>
-    <div id="output" style="width: 800px; height: 250px; overflow-y: scroll;" >
-    </div>
+    </section>
 
-    <div id="contentMessage">
-        <BR>
-        user:	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="txtUser" id="txtUser" /> <BR><BR>
-        message: <input type="text" name="txtMessage" id="txtMessage" /> <BR>
-        <BR>
-
-        <a href="#" class="btn btn-success"
-        onclick="doSend( document.getElementById('txtUser').value + ':' + document.getElementById('txtMessage').value );">
-            <i class="icon-plus icon-white"></i>Send Message</a>
-    </div>
 }
