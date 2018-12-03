@@ -19,7 +19,7 @@ class ChatController @Inject()(implicit val system: ActorSystem, materializer: M
 
   ChatBotAdminActor(system)
 
-  def index_socket = Action { request =>
+  def chat_display = Action { request =>
     Ok(views.html.chat_index()(Flash(Map())))
   }
 

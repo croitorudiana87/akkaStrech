@@ -19,6 +19,10 @@ libraryDependencies += cache
 libraryDependencies += jdbc
 libraryDependencies += evolutions
 libraryDependencies += "com.typesafe.play" %% "anorm" % "2.4.0"
+libraryDependencies +="com.typesafe.akka" %% "akka-stream" % akkaVersion
+libraryDependencies +="org.twitter4j" % "twitter4j-stream" % "4.0.3"
+libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.1.5"
+libraryDependencies += "io.spray" %%  "spray-json" % "1.3.5"
 
 lazy val akkaVersion = "2.4.18"
 libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test

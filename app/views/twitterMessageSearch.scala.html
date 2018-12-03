@@ -1,0 +1,54 @@
+@()(implicit flash:Flash)
+
+@main("twitter"){
+
+<!DOCTYPE html>
+    <meta charset="utf-8" />
+    <title>Twitter Search</title>
+    <script type="text/javascript">
+            var output;
+            var websocket = new WebSocket("ws://localhost:9000/twitter/ws");
+
+            function init(){
+                output = document.getElementById("output");
+
+                websocket.onmessage = function(evt) {
+                    console.log(evt.data)
+                    writeToScreen('<span style="color:#2d8659;">' + evt.data+ '</span>');
+                };
+
+                websocket.onerror = function(evt) {
+                    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+                };
+            }
+
+            function doSend(message){
+                websocket.send(message);
+            }
+
+            function writeToScreen(message){
+                var pre = document.createElement("p");
+                pre.style.wordWrap = "break-word";
+                pre.innerHTML = message;
+                output.prepend(pre);
+            }
+
+            window.addEventListener("load", init, false);
+    </script>
+    <section id='login' class="s-home target-section" data-parallax="scroll" data-image-src="@routes.Assets.at("images/stats-bg.jpg")" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+        <div class="log-form">
+            <h2>Messages</h2>
+            <div id="output" style="width: 800px; height: 400px; overflow-y: scroll;" >
+            </div>
+            <form>
+                <input type="text" title="txtMessage" placeholder="Message" id="txtMessage"/>
+                <button type="button" class="btn" onclick="doSend(document.getElementById('txtMessage').value);">
+                    Send Message</button>
+                <button type="button" class="btn" onclick="window.location.href='/'; " style="float: right;">
+                    Home</button>
+            </form>
+        </div>
+
+    </section>
+
+}

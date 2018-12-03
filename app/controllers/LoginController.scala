@@ -4,19 +4,18 @@ import javax.inject.Singleton
 
 import com.google.inject.Inject
 import models.User
-import play.api.cache._
 import play.api.data.Forms._
 import play.api.data._
 import play.api.i18n.Messages
 import play.api.libs.json._
 import play.api.mvc.{Controller, _}
-import play.api.{Configuration, Environment, Logger}
+import play.api.{Configuration, Logger}
 
 /**
   * Created by diana on 06-Nov-18.
   */
 @Singleton
-class LoginController @Inject() (val configuration: Configuration, val environment: Environment, val cache: CacheApi)
+class LoginController @Inject() (val configuration: Configuration)
   extends Controller {
 
   case class Login(username: String, password: String)

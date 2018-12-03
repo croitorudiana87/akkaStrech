@@ -31,8 +31,10 @@
             <ul class="home-sidelinks">
                 <li><a class="smoothscroll" href="#login">Login<span>play persistence</span></a></li>
                 <li><a class="smoothscroll" href="#services">Consuming API<span>what we do</span></a></li>
-                <li><a href="/chat/index_socket"><img height="42" width="42" src="@routes.Assets.at("images/chat.png")"><span>
-                    akka chat</span></a></li>
+                <li><a href="/chat/chat_display"><img height="42" width="42" src="@routes.Assets.at("images/chat.png")"><span>
+                    Akka chat</span></a></li>
+                <li><a href="/twitter/twitter_display"><img height="42" width="42" src="@routes.Assets.at("images/twitter.png")"><span>
+                    Akka streams</span></a></li>
             </ul> <!-- end home-sidelinks -->
 
             <ul class="home-social">
@@ -63,7 +65,7 @@
 
 
     ================================================== -->
-        <section id='login' class="s-home target-section" data-parallax="scroll" data-image-src="@routes.Assets.at("images/hero-bg.jpg")" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+        <section id='login' class="s-home target-section" data-parallax="scroll" data-image-src="@routes.Assets.at("images/wheel-2000.jpg")" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
             <script type="text/javascript">
                     var user = "anonymous" + Math.floor(Math.random() * 100) + 1
                     window.sessionStorage.setItem("user", user)
@@ -134,20 +136,22 @@
 
         <!-- services
     ================================================== -->
-        <section id='services' class="s-services light-gray">
+        <section id='services' class="s-services light-gray" >
 
             <div class="row section-header" data-aos="fade-up">
                 <div class="col-full">
-                    <h3 class="subhead">What We Do</h3>
+                    <h3 class="subhead">Fast data</h3>
                     <h1 class="display-1">
-                        We have everything you need to launch and grow a successful digital business.</h1>
+                        Akka Streams!</h1>
                 </div>
             </div> <!-- end section-header -->
 
             <div class="row" data-aos="fade-up">
                 <div class="col-full">
                     <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                        Big data has been around for quite a while and it's usually batch processing.
+                        In the current world though, we're starting to talk about fast data which means we want
+                        to process the data right away when it hits our servers for example.
                     </p>
                 </div>
             </div> <!-- end about-desc -->
@@ -159,10 +163,9 @@
                         <i class="icon-tv"></i>
                     </div>
                     <div class="service-text">
-                        <h3 class="h4">Brand Identity</h3>
-                        <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
-                            Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                            Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        <h3 class="h4">Blocking</h3>
+                        <p>Blocking can happen in a pull based system this means a consumer pulls data from the producer blocking takes place where there is no data to pull.
+                            This is safe for the consumer, it will not run out of memory. However it is also very slow to build systems based purely on pulling data.
                         </p>
                     </div>
                 </div>
@@ -172,10 +175,8 @@
                         <i class="icon-group"></i>
                     </div>
                     <div class="service-text">
-                        <h3 class="h4">Illustration</h3>
-                        <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
-                            Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                            Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        <h3 class="h4">Back pressure</h3>
+                        <p>The need for back pressure arises from the producer wants to create more data than the consumer can handle. Which can cause the consumer to crash.
                         </p>
                     </div>
                 </div>
@@ -185,10 +186,11 @@
                         <i class="icon-earth"></i>
                     </div>
                     <div class="service-text">
-                        <h3 class="h4">Web Design</h3>
-                        <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
-                            Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                            Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        <h3 class="h4">Pump - Cap <-> Source - Sink allegory</h3>
+                        <p>Let's imagine we have a source of water and a sink which we want to fill and we have pipes between them.
+                            If we decided to put a pump at the end of the pipes to pull the water the pump will still work. Even if there is no water on the source.
+                            And if we move the pump to start off the pipes to push the water, the pump will still work even if the sink is filled and the water just overflows, to fix our problems we need to put a pump on the source and cap on the sink.
+                            This means the pump will work when the source contains water and when the sink fills the cap will create back pressure and trigger the pump to stop pumping.
                         </p>
                     </div>
                 </div>
@@ -198,10 +200,10 @@
                         <i class="icon-cube"></i>
                     </div>
                     <div class="service-text">
-                        <h3 class="h4">Product Strategy</h3>
-                        <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
-                            Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                            Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                        <h3 class="h4">Akka flow</h3>
+
+                        <p>The concept of multiple processing stages between a source and a sink.
+                            Akka streams provides this nice type safe DSL to build streams from and the actual execution of it is actually handled by actors underneath
                         </p>
                     </div>
                 </div>
