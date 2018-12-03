@@ -8,8 +8,11 @@ This is an exercise application that proves my hardships with integrating akka, 
   What it has: 
   
   A main web application page
+  
   A simple login page with login functionality DB integration - anorm - specific to play
-  A chat use-case where multiple users can send messages to a chat and one user can see messages of other users
-  Akka Streams usage by consuming an API from Twitter. 
+  
+  A chat use-case where multiple users can send messages to a chat and one user can see messages of other users, comunication fronEnd-backEnd trough websockets
+  
+  Akka Streams usage by consuming an API from Twitter and displaying content in UI. 
   
   Twitter credentials were deleted.
