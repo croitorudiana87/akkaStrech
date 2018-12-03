@@ -2,8 +2,8 @@
 
 # play-scala-akka
 
-This is an exercise application that proves my hardships with integrating akka, scala, play, sbt and java script in an application trying to focus mainly
- on learning akka and it's revolutionary paradigm of communicating trough events.
+This is an exercise application that proves my hardships with integrating akka, scala, play, sbt and javaScript in an application, trying to focus mainly
+ on learning akka and it's revolutionary paradigm of coding trough events.
   
   What it has: 
   
@@ -11,3 +11,5 @@ This is an exercise application that proves my hardships with integrating akka, 
   A simple login page with login functionality DB integration - anorm - specific to play
   A chat use-case where multiple users can send messages to a chat and one user can see messages of other users
   Akka Streams usage by consuming an API from Twitter. 
+  
+  Twitter credentials were deleted.
