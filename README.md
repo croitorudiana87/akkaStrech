@@ -3,7 +3,7 @@
 # play-scala-akka
 
 This is an exercise application that proves my hardships with integrating akka, scala, play, sbt and javaScript in an application, trying to focus mainly
- on learning akka and it's revolutionary paradigm of coding trough events.
+ on learning akka and it's revolutionary paradigm of coding trough actors and events.
   
   What it has: 
   
